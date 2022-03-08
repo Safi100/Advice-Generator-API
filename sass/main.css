@@ -94,6 +94,11 @@ body {
   cursor: pointer;
 }
 
+.dice-container:hover {
+  -webkit-box-shadow: 0 0 30px #52ffa8;
+          box-shadow: 0 0 30px #52ffa8;
+}
+
 .dice {
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
