@@ -1,0 +1,96 @@
+@import "variables";
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%; // 1rem = 10px
+}
+body{
+    font-family: $Font;
+    background: $Dark-Blue;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+// 20.48
+.advice_container{
+    min-height:33.8rem;
+    max-width:54rem;
+    width:90%;
+    background:$Dark-Grayish-Blue;
+    padding: 3.2rem 1.5rem;
+    text-align: center;
+    padding: 5.12rem 2.4rem;
+    border-radius: 1rem;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.advice_number{
+    color: $Neon-Green;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.quotes{
+    font-size: 2.8rem;
+    color: var(--light-cyan);
+    font-weight: 800;
+    padding: 0 1.6rem;
+    color: $Light-Cyan;
+}
+.quotes::before{
+    content: open-quote;
+}
+.quotes::after{
+    content: close-quote;
+}
+
+.line{
+    background-image: url(../images/pattern-divider-mobile.svg);
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dice-container{
+    width: 6.4rem;
+    height: 6.4rem;
+    background: $Neon-Green;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform:translate(-50%,30%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dice{
+    transition: transform 1s;
+    transform: rotate(0deg);
+}
+
+.advice_number , .line { margin-bottom: 2.048rem;}
+.quotes{ margin-bottom: 3.008rem;}
+
+.roll{ transform: rotate(360deg); }
+
+@media screen and (min-width: 568px){
+    .line {
+        background-image: url(../images/pattern-divider-desktop.svg);
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; color: $Light-Cyan;}
+.attribution a { color: $Neon-Green;}
